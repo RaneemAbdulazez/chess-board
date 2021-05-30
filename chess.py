@@ -40,3 +40,14 @@ class ChessBoard :
 
 chessBoard  = ChessBoard()
 chessBoard.render([4,5],[2,5])
+
+def test_chess():
+    chessBoard  = ChessBoard()
+    expected = ["red is underattack","red is underattack","red is underattack","red is safe"]
+    actual = [chessBoard.render([4,3],[2,5]),chessBoard.render([4,3],[4,5]),chessBoard.render([4,5],[2,5]),chessBoard.render([1,3],[2,5])]
+    assert expected == actual
+    print("all tests passed")
+
+chessBoard  = ChessBoard()
+test_chess()
+chessBoard.render([4,5],[2,5])
